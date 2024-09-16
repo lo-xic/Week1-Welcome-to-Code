@@ -24,20 +24,13 @@ console.log(konversiMenit(120)); // 2:00
 
 function konversiMenit(menit) {
     let jam = menit/60;
-    let menit1 = menit % 60;
-    const angkaToString = menit1.toString();
+    let menit1 = menit % 60; //modulus untuk mencari sisa menit 
+    let menit1toString = menit1.toString(); //diubah ke string untuk di padding
+   
+    let result = Math.floor(jam) + ":" + menit1toString.padStart(2, "0"); //math.floor membulatkan ke bawah diambil jamnya saja
+     //pading variabel menit1toString di awal dengan 0 sampai panjangnya 2 
+    //  jika panjangnya sudah 2 tidak dijalankan paddingnya, namun langsung ke nilai variabelnya
 
-    
-    for (let i = angkaToString.length - 1; i >= 0; i--){
-        
-    }
-    while (angkaToString.length < i){
-        if (menit1[0] !== 0){
-            menit1 += menit1[i];
-        }
-    }
-
-    let result = Math.floor(jam) + ":" + menit1;
     return result.toString();
     // you can only write your code here!
 }

@@ -21,6 +21,16 @@ console.log(xo('xoxooxxo')); // true
 */
 
 function xo(str) {
+    let cekx = str.match(/x/gi); //search x di str dan dikembalikan ke array
+    let ceko = str.match(/o/gi); //search o di str dan dikembalikan ke array
+    let resultx = cekx.length; //menghitung array x di variabel cekx
+    let resulto = ceko.length; //menghitung array o di variabel ceko
+
+    if (resultx == resulto){ //pengkondisian jumlah variabel sama
+        return true; //mengembalikan nilai ke function
+    } else { //pengkondisian jumlah variabel tidak sama
+        return false; //mengembalikan nilai ke function
+    }
     // you can only write your code here!
 }
   
