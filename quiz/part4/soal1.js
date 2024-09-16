@@ -23,3 +23,5 @@ function shoutOut(){
 }
 
 console.log(shoutOut()); //memanggil fungsi yang telah diberi nilai
+
+console.log("");
